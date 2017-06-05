@@ -7,7 +7,7 @@ COPY keystone-requirements.txt /tmp/
 RUN \
     `# Install packages` \
     apt-get update -y && \
-    apt-get install wget git libssl-dev -y && \
+    apt-get install mariadb-server -y && \
     apt-get install python3 libpython3-dev python3-pip nginx mysql-client -y && \
     wget https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64.deb && \
     dpkg -i dumb-init_*.deb && \
