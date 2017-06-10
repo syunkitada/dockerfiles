@@ -1,7 +1,8 @@
 apt-get update
-apt-get install -y apt-transport-https curl vim wget git libssl-dev
+apt-get install -y apt-transport-https curl vim wget git libssl-dev nmap
 apt-get install -y python3 libpython3-dev python3-pip mysql-client nginx
 apt-get install -y libvirt-dev
+apt-get install -y ebtables iptables
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
