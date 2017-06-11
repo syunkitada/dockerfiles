@@ -87,4 +87,3 @@ zope.interface==4.4.1
 
 # extensions
 PyMySQL==0.7.11
-uWSGI==2.0.15
