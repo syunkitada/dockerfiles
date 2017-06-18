@@ -33,7 +33,7 @@ RUN \
     cp -r /tmp/glance/etc /etc/glance && \
 
     `# Install nova` \
-    virtualenv /opt/nova && \
+    virtualenv --system-site-packages /opt/nova && \
     cd /tmp && \
     git clone https://github.com/openstack/nova.git -b stable/ocata && \
     cd nova && \
@@ -42,7 +42,7 @@ RUN \
     cp -r /tmp/nova/etc/nova /etc/nova && \
 
     `# Install neutron` \
-    virtualenv /opt/neutron && \
+    virtualenv --system-site-packages /opt/neutron && \
     cd /tmp && \
     git clone https://github.com/openstack/neutron.git -b stable/ocata && \
     cd neutron && \
