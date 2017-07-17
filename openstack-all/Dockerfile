@@ -19,8 +19,8 @@ RUN \
     cd /tmp && \
     git clone https://github.com/openstack/keystone.git -b stable/ocata && \
     cd keystone && \
-    /opt/keystone/bin/pip3 install -r /tmp/keystone-requirements.txt && \
-    /opt/keystone/bin/python3 setup.py install && \
+    /opt/keystone/bin/pip install -r /tmp/keystone-requirements.txt && \
+    /opt/keystone/bin/python setup.py install && \
     cp -r /tmp/keystone/etc /etc/keystone && \
 
     `# Install glance` \
@@ -28,8 +28,8 @@ RUN \
     cd /tmp/ && \
     git clone https://github.com/openstack/glance.git -b stable/ocata && \
     cd glance && \
-    /opt/glance/bin/pip3 install -r /tmp/glance-requirements.txt && \
-    /opt/glance/bin/python3 setup.py install && \
+    /opt/glance/bin/pip install -r /tmp/glance-requirements.txt && \
+    /opt/glance/bin/python setup.py install && \
     cp -r /tmp/glance/etc /etc/glance && \
 
     `# Install nova` \
@@ -37,8 +37,8 @@ RUN \
     cd /tmp && \
     git clone https://github.com/openstack/nova.git -b stable/ocata && \
     cd nova && \
-    /opt/nova/bin/pip3 install -r /tmp/nova-requirements.txt && \
-    /opt/nova/bin/python3 setup.py install && \
+    /opt/nova/bin/pip install -r /tmp/nova-requirements.txt && \
+    /opt/nova/bin/python setup.py install && \
     cp -r /tmp/nova/etc/nova /etc/nova && \
 
     `# Install neutron` \
@@ -46,8 +46,8 @@ RUN \
     cd /tmp && \
     git clone https://github.com/openstack/neutron.git -b stable/ocata && \
     cd neutron && \
-    /opt/neutron/bin/pip3 install -r /tmp/neutron-requirements.txt && \
-    /opt/neutron/bin/python3 setup.py install && \
+    /opt/neutron/bin/pip install -r /tmp/neutron-requirements.txt && \
+    /opt/neutron/bin/python setup.py install && \
     cp -r /tmp/neutron/etc /etc/neutron && \
     cp -r /tmp/neutron/etc/neutron/* /etc/neutron && \
 
@@ -57,11 +57,14 @@ RUN \
     cd /tmp && \
     git clone https://github.com/openstack/horizon.git -b stable/ocata && \
     cd horizon && \
-    /opt/horizon/bin/pip3 install -r /tmp/horizon-requirements.txt && \
-    /opt/horizon/bin/python3 setup.py install && \
+    /opt/horizon/bin/pip install -r /tmp/horizon-requirements.txt && \
+    /opt/horizon/bin/python setup.py install && \
     mkdir -p /opt/horizon/share/horizon && \
     cp -r /tmp/horizon/openstack_dashboard /opt/horizon/share/horizon && \
     cp -r /tmp/horizon/manage.py /opt/horizon/share/horizon && \
+    cd /opt/horizon/share/horizon && \
+    /opt/horizon/bin/python manage.py collectstatic --noinput && \
+    /opt/horizon/bin/python manage.py compress --force && \
 
     `# Clean packages` \
     rm -rf /tmp/* && \
