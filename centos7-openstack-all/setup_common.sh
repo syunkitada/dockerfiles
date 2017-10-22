@@ -2,7 +2,7 @@ yum install -y epel-release
 yum install -y vim wget curl net-tools
 yum install -y mariadb
 yum install -y nginx
-yum install -y openstack-tools nova keystone neutron glance horizon cinder heat
+yum install -y openstack-manager openstack-tools nova keystone neutron glance horizon cinder heat
 yum install -y kubectl
 yum install -y ebtables bridge-utils sysfsutils dbus genisoimage vde2-2.3.2 qemu-2.9.0
 
