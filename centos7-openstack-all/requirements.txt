@@ -1,0 +1,14 @@
+oslo.config
+oslo.db
+oslo.service
+oslo.messaging
+eventlet<0.20.0
+flask
+pika<0.11
+python-neutronclient
+python-novaclient
+python-keystoneclient
+python-glanceclient
+influxdb
+watchdog
+kubernetes
