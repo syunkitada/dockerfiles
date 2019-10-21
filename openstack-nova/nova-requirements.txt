@@ -62,7 +62,7 @@ oslo.service==1.23.0
 oslo.utils==3.25.1
 oslo.versionedobjects==1.24.0
 packaging==16.8
-paramiko==2.1.2
+paramiko==2.1.6
 Paste==2.0.3
 PasteDeploy==1.5.2
 pbr==3.0.1
