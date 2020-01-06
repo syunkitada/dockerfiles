@@ -96,7 +96,7 @@ tenacity==4.1.0
 tinyrpc==0.5
 urllib3==1.21.1
 vine==1.1.3
-waitress==1.0.2
+waitress==1.4.2
 WebOb==1.7.2
 WebTest==2.0.27
 wrapt==1.10.10
