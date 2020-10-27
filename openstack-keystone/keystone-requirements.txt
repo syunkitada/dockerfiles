@@ -8,7 +8,7 @@ certifi==2017.4.17
 cffi==1.10.0
 chardet==3.0.3
 contextlib2==0.5.5
-cryptography==1.8.2
+cryptography==3.2
 debtcollector==1.13.0
 decorator==4.0.11
 dogpile.cache==0.6.3
