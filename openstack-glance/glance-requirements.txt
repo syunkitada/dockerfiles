@@ -25,7 +25,7 @@ greenlet==0.4.12
 httplib2==0.10.3
 idna==2.5
 iso8601==0.1.11
-Jinja2==2.9.6
+Jinja2==2.11.3
 jsonschema==2.6.0
 keystoneauth1==2.20.0
 keystonemiddleware==4.15.0
