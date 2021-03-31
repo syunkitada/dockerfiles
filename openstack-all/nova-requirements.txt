@@ -29,7 +29,7 @@ jsonschema==2.6.0
 keystoneauth1==2.20.0
 keystonemiddleware==4.15.0
 kombu==3.0.37
-lxml==3.7.3
+lxml==4.6.3
 Mako==1.0.6
 MarkupSafe==1.0
 microversion-parse==0.1.4
