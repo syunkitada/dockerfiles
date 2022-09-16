@@ -59,7 +59,7 @@ oslo.reports==1.17.0
 oslo.rootwrap==5.4.1
 oslo.serialization==2.16.0
 oslo.service==1.19.0
-oslo.utils==3.22.0
+oslo.utils==4.10.1
 oslo.versionedobjects==1.21.0
 packaging==16.8
 paramiko==2.1.2
